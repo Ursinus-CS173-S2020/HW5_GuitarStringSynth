@@ -12,6 +12,13 @@ package guitarstring;
 public class SquareWave {
     public static final int FS = StdAudio.SAMPLE_RATE;
     
+    /**
+     * 
+     * @param x An array of length N
+     * @param y Another array of length N
+     * @return An array which holds the element by element
+     *         sum of x and y
+     */
     public static double[] sumArrays(double[] x, double[] y) {
         double[] z = {};
         if (x.length != y.length) {
@@ -27,6 +34,13 @@ public class SquareWave {
         return z;
     }
     
+    /**
+     * 
+     * @param T The length of each peak or valley region
+     * @param a The max/min value of the square wave
+     * @param duration The length in seconds of the wave
+     * @return 
+     */
     public static double[] getSquareWave(int T, double a, double duration) {
         int N = (int)Math.round(duration*FS);
         double[] audio = new double[N];
@@ -42,7 +56,7 @@ public class SquareWave {
     }
     public static void main(String[] args) {
         double[] x = getSquareWave(50, 0.3, 1);
-        double[] y = getSquareWave(25, 0.3, 1);
+        double[] y = getSquareWave(30, 0.3, 1);
         double[] z = sumArrays(x, y);
         StdAudio.play(z);
     }
