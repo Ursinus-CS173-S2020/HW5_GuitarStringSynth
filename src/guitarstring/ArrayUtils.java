@@ -41,6 +41,9 @@ public class ArrayUtils {
         return y;
     }
     
+    // TODO: There are more efficient ways to implement the two methods below
+    // by using cumulative sums, but I decided to keep them simple so they
+    // are more readable to students
     /**
      * 
      * @param x An array of N audio samples
