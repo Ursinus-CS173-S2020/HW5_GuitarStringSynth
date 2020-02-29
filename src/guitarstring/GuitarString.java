@@ -52,7 +52,7 @@ public class GuitarString {
      * EXTRA CREDIT: Open up a text file that has on each line
      *               halfstep,duration,decay
      *               And play each line one by one
-     * @param filename 
+     * @param filename A path to the file that should be played
      */
     public static void playFile(String filename) {
         File inputFile = new File(filename);
